@@ -1,0 +1,444 @@
+[
+    {
+        "id": 1,
+        "bannerURL":"./img/movie2.png",
+        "name": "扫毒",
+        "language": "2d/国语",
+        "minute": "110",
+        "type": "犯罪/动作",
+        "sessionId":"123456789",
+        "scheduling": [
+            {
+                "date": "2019-02-08",
+                "dateRows": [
+                    {
+                        "start": "11:00",
+                        "end": "13:00",
+                        "ticketPrice": "681.8",
+                        "id":1,
+                        "miniCode":"../img/"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":2,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":3,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-03-08",
+                "dateRows": [
+                    {
+                        "start": "12:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":4,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":5,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":6,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-04-08",
+                "dateRows": [
+                    {
+                        "start": "02:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":7,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":8,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":9,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "bannerURL":"./img/movie2.png",
+        "name": "追龙",
+        "language": "2d/国语",
+        "minute": "420",
+        "type": "犯罪/动作",
+        "sessionId":"123456789",
+        "scheduling": [
+            {
+                "date": "2019-05-08",
+                "dateRows": [
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "581.8",
+                        "id":1,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":2,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":3,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-06-08",
+                "dateRows": [
+                    {
+                        "start": "10:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":4,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":5,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":6,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-08-08",
+                "dateRows": [
+                    {
+                        "start": "10:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":7,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":8,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":9,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "bannerURL":"./img/movie2.png",
+        "name": "天线宝宝",
+        "language": "2d/鬼佬",
+        "minute": "60",
+        "type": "犯罪/动作",
+        "sessionId":"123456789",
+        "scheduling": [
+            {
+                "date": "2019-02-08",
+                "dateRows": [
+                    {
+                        "start": "06:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":1,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":2,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":3,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-05-25",
+                "dateRows": [
+                    {
+                        "start": "10:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":4,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":5,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":6,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-8-20",
+                "dateRows": [
+                    {
+                        "start": "10:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":7,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":8,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":9,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "bannerURL":"./img/movie2.png",
+        "name": "梁非凡",
+        "language": "2d/吃屎",
+        "minute": "150",
+        "type": "犯罪/动作",
+        "sessionId":"123456789",
+        "scheduling": [
+            {
+                "date": "2019-01-01",
+                "dateRows": [
+                    {
+                        "start": "02:00",
+                        "end": "13:00",
+                        "ticketPrice": "481.8",
+                        "id":1,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":12,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":13,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-02-01",
+                "dateRows": [
+                    {
+                        "start": "10:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":14,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":15,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":16,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-03-01",
+                "dateRows": [
+                    {
+                        "start": "10:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":17
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":18
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":19
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "bannerURL":"./img/movie2.png",
+        "name": "菜鸡",
+        "language": "2d/鸡鸡",
+        "minute": "920",
+        "type": "犯罪/动作",
+        "sessionId":"123456789",
+        "scheduling": [
+            {
+                "date": "2019-01-05",
+                "dateRows": [
+                    {
+                        "start": "05:00",
+                        "end": "13:00",
+                        "ticketPrice": "381.8",
+                        "id":1,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":2,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":3,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-01-08",
+                "dateRows": [
+                    {
+                        "start": "10:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":14,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":15,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":16,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            },
+            {
+                "date": "2019-05-01",
+                "dateRows": [
+                    {
+                        "start": "10:00",
+                        "end": "13:00",
+                        "ticketPrice": "281.8",
+                        "id":17,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "09:00",
+                        "end": "13:00",
+                        "ticketPrice": "282.8",
+                        "id":18,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    },
+                    {
+                        "start": "08:00",
+                        "end": "13:00",
+                        "ticketPrice": "238.8",
+                        "id":19,
+                        "miniCode":"http://p2.qhimgs4.com/t01bb685fbaf06d2784.jpg"
+                    }
+                ]
+            }
+        ]
+    }
+]

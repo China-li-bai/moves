@@ -1,0 +1,602 @@
+[
+    {
+        "id": "1",
+        "name": "复仇者联盟4：终局之战",
+        "filmAttr": "英语",
+        "coverBill": "https://ssl.arkcloudcorp.com/bill/fuchouzhelianmeng4.png",
+        "len": "181",
+        "classify": "动作/科幻/奇幻/冒险",
+        "scheduling": [
+            {
+                "date": "2019-09-19",
+                "dateRows": [
+                    {
+                        "id": "83273819967455232",
+                        "start": "00:00:00",
+                        "end": "03:01:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/27878378d79e44069ded42288a42acf3.png"
+                    },
+                    {
+                        "id": "83273835108892672",
+                        "start": "00:00:00",
+                        "end": "03:01:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/5eb15ed260514bdc9333926825c47e2f.png"
+                    }
+                ]
+            },
+            {
+                "date": "2019-09-20",
+                "dateRows": [
+                    {
+                        "id": "83273835108892672",
+                        "start": "00:00:00",
+                        "end": "03:01:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/c8cdb3802e8345ad9b11ded7b49fe47e.png"
+                    }
+                ]
+            },
+            {
+                "date": "2019-09-21",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-22",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-23",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-24",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-25",
+                "dateRows": []
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "电锯惊魂8：竖锯",
+        "filmAttr": "英语",
+        "coverBill": "https://ssl.arkcloudcorp.com/bill/dianjujinghun8.png",
+        "len": "92",
+        "classify": "惊悚/悬疑/恐怖",
+        "scheduling": [
+            {
+                "date": "2019-09-19",
+                "dateRows": [
+                    {
+                        "id": "83274200730566656",
+                        "start": "00:00:00",
+                        "end": "01:32:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/c9d5dc34daba42298b047ea8e2e62c6f.png"
+                    },
+                    {
+                        "id": "83274226622005248",
+                        "start": "23:00:00",
+                        "end": "00:32:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/25d6b979198b493f94b581bdb6bff9a9.png"
+                    }
+                ]
+            },
+            {
+                "date": "2019-09-20",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-21",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-22",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-23",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-24",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-25",
+                "dateRows": []
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "惊奇队长",
+        "filmAttr": "英语",
+        "coverBill": "https://ssl.arkcloudcorp.com/bill/jingqiduizhang.png",
+        "len": "124",
+        "classify": "动作/科幻/冒险",
+        "scheduling": [
+            {
+                "date": "2019-09-19",
+                "dateRows": [
+                    {
+                        "id": "83505550192541696",
+                        "start": "00:00:00",
+                        "end": "02:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/92aac4d7505c49dda67df54cdbab0351.png"
+                    },
+                    {
+                        "id": "83505561789792256",
+                        "start": "00:00:00",
+                        "end": "02:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/d00dd3f58e064cb2bb3bcca996317a1e.png"
+                    },
+                    {
+                        "id": "83505572602707968",
+                        "start": "09:00:00",
+                        "end": "11:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/1f5f8bd708804c1581bd35c944b33108.png"
+                    },
+                    {
+                        "id": "83505584531308544",
+                        "start": "21:00:00",
+                        "end": "23:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/4b4503ef13374ccd80f0bc1710485c3a.png"
+                    },
+                    {
+                        "id": "83505600914259968",
+                        "start": "14:00:00",
+                        "end": "16:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/53d83065f7ec459e993131596e9e8ab9.png"
+                    },
+                    {
+                        "id": "83505614612856832",
+                        "start": "18:00:00",
+                        "end": "20:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/ed037b11c9ea43fe9c5d8d3ddbb4ec4d.png"
+                    },
+                    {
+                        "id": "83505633025851392",
+                        "start": "07:00:00",
+                        "end": "09:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/f274f77628084710ae41e2e1f7f47d2d.png"
+                    },
+                    {
+                        "id": "83505717306195968",
+                        "start": "00:00:00",
+                        "end": "02:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/40da18ececea44679256e811db05de6c.png"
+                    },
+                    {
+                        "id": "83565796877402112",
+                        "start": "00:00:00",
+                        "end": "02:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/4c59fd9017b9472da28f500a83176e86.png"
+                    },
+                    {
+                        "id": "83566015698436096",
+                        "start": "10:10:00",
+                        "end": "12:14:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/a4809e6b207a4e0f83715a3853a6878f.png"
+                    }
+                ]
+            },
+            {
+                "date": "2019-09-20",
+                "dateRows": [
+                    {
+                        "id": "83505666186018816",
+                        "start": "23:00:00",
+                        "end": "01:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/2f5f058677b74df99c773cc811c3c341.png"
+                    },
+                    {
+                        "id": "83505683814678528",
+                        "start": "12:00:00",
+                        "end": "14:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/a16579c8de3c40ea862bb669ff1d3768.png"
+                    },
+                    {
+                        "id": "83505700986159104",
+                        "start": "06:00:00",
+                        "end": "08:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/cecad26e81b146a9a94c6da0b9c3087c.png"
+                    },
+                    {
+                        "id": "83505717306195968",
+                        "start": "00:00:00",
+                        "end": "02:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/6c6d23dd706b4eaa9837b15e1854ce40.png"
+                    },
+                    {
+                        "id": "83505734146326528",
+                        "start": "10:00:00",
+                        "end": "12:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/1f1223c7f1e4404f9fe48c0f5d361b62.png"
+                    },
+                    {
+                        "id": "83505805185253376",
+                        "start": "00:00:00",
+                        "end": "02:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/c04dc99299f74a06a57b5ce3ae169d22.png"
+                    }
+                ]
+            },
+            {
+                "date": "2019-09-21",
+                "dateRows": [
+                    {
+                        "id": "83505757412130816",
+                        "start": "23:00:00",
+                        "end": "01:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/5389bafd307542179ca789783d1177ba.png"
+                    },
+                    {
+                        "id": "83505774713634816",
+                        "start": "14:00:00",
+                        "end": "16:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/08724ab5a9f640029138bfa54daa388e.png"
+                    },
+                    {
+                        "id": "83505790903648256",
+                        "start": "05:00:00",
+                        "end": "07:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/1951d0e2186e4a36911ac81403bbb7f6.png"
+                    },
+                    {
+                        "id": "83505805185253376",
+                        "start": "00:00:00",
+                        "end": "02:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/323f426ac59447b78134a4e378333b82.png"
+                    },
+                    {
+                        "id": "83505821111025664",
+                        "start": "15:00:00",
+                        "end": "17:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/6e00a6ce9108484ba85e921d2d9c9345.png"
+                    }
+                ]
+            },
+            {
+                "date": "2019-09-22",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-23",
+                "dateRows": [
+                    {
+                        "id": "83505845949693952",
+                        "start": "15:00:00",
+                        "end": "17:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/4497b1c54f49474798489ac9872ac9e2.png"
+                    },
+                    {
+                        "id": "83505858532605952",
+                        "start": "04:00:00",
+                        "end": "06:04:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/fb7052f4486c41608d9a749175e11e81.png"
+                    },
+                    {
+                        "id": "83505872428335104",
+                        "start": "04:16:00",
+                        "end": "06:20:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/6100d86af78d4272baa268057b8253fb.png"
+                    },
+                    {
+                        "id": "83505886256955392",
+                        "start": "04:25:00",
+                        "end": "06:29:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/a77f0f9fa9234673a0dec06872b56bcf.png"
+                    },
+                    {
+                        "id": "83505904669949952",
+                        "start": "04:35:00",
+                        "end": "06:39:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/b9e55620c9d24215a025111f1a41cd69.png"
+                    }
+                ]
+            },
+            {
+                "date": "2019-09-24",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-25",
+                "dateRows": [
+                    {
+                        "id": "83505924660002816",
+                        "start": "03:35:00",
+                        "end": "05:39:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/5f2586dadfdb4262b448ad566aafe0b1.png"
+                    },
+                    {
+                        "id": "83505940912930816",
+                        "start": "03:30:00",
+                        "end": "05:34:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/95fa22dbc0094fe78859ba6d2a509e32.png"
+                    },
+                    {
+                        "id": "83505957362991104",
+                        "start": "03:20:00",
+                        "end": "05:24:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/dda5c4880cb44a27bc09a6de8722b7c3.png"
+                    },
+                    {
+                        "id": "83505976761647104",
+                        "start": "03:36:00",
+                        "end": "05:40:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/5aab62ffa87f44558392ed50a2cbeacb.png"
+                    },
+                    {
+                        "id": "83505992356069376",
+                        "start": "03:44:00",
+                        "end": "05:48:00",
+                        "ticketPrice": 5.00,
+                        "sessionId": "ovYj74miuRYRpPlInLJtAy41sYys",
+                        "miniCode": "https://ssl.arkcloudcorp.com:443/airTheaterH5/img/fc7a062f01534ef5a6af2fa7b566f0bc.png"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "星际穿越",
+        "filmAttr": "英语",
+        "coverBill": "https://ssl.arkcloudcorp.com/bill/xingjichuanyue.png",
+        "len": "169",
+        "classify": "科幻/冒险/剧情",
+        "scheduling": [
+            {
+                "date": "2019-09-19",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-20",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-21",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-22",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-23",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-24",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-25",
+                "dateRows": []
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "银河护卫队2",
+        "filmAttr": "英语",
+        "coverBill": "https://ssl.arkcloudcorp.com/bill/yinhehuweidui2.png",
+        "len": "136",
+        "classify": "动作/科幻/冒险",
+        "scheduling": [
+            {
+                "date": "2019-09-19",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-20",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-21",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-22",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-23",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-24",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-25",
+                "dateRows": []
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "name": "寄生虫",
+        "filmAttr": "韩语",
+        "coverBill": "https://ssl.arkcloudcorp.com/bill/jishengchong.png",
+        "len": "132",
+        "classify": "剧情/喜剧",
+        "scheduling": [
+            {
+                "date": "2019-09-19",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-20",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-21",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-22",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-23",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-24",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-25",
+                "dateRows": []
+            }
+        ]
+    },
+    {
+        "id": "111",
+        "name": "哪吒",
+        "filmAttr": "国语3D",
+        "coverBill": "https://ssl.arkcloudcorp.com/static/bill.jpg",
+        "len": "140",
+        "classify": "动作/科幻/惊悚",
+        "scheduling": [
+            {
+                "date": "2019-09-19",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-20",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-21",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-22",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-23",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-24",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-25",
+                "dateRows": []
+            }
+        ]
+    },
+    {
+        "id": "1231",
+        "name": "烈火英雄",
+        "filmAttr": "英语3D",
+        "coverBill": "https://ssl.arkcloudcorp.com/static/bill.jpg",
+        "len": "121",
+        "classify": "",
+        "scheduling": [
+            {
+                "date": "2019-09-19",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-20",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-21",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-22",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-23",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-24",
+                "dateRows": []
+            },
+            {
+                "date": "2019-09-25",
+                "dateRows": []
+            }
+        ]
+    }
+]

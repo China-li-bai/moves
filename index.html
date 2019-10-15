@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+        />
+        <title>我的影院</title>
+        <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+        <link rel="stylesheet" href="./utils/vantDist/vant.css">
+        <script src="./js//jQuery.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="./js/vue.min.js"></script>
+        <script src="js/flexible.js"></script>
+        <script src="js/qrcode.min.js"></script> //二维码插件
+        <script src="js/xe-clipboard.min.js"></script>
+        <script src="./utils/vantDist/vant.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .flex {
+                display: flex;
+            }
+            .middle {
+                justify-content: center;
+                align-items: center;
+            }
+            .mask {
+                z-index: 2;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .div_float:after {
+                clear: both;
+                content: '';
+                width: 0;
+                height: 0;
+                visibility: hidden;
+                display: block;
+            }
+            .lineBox {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .banner {
+                margin-top: 0.34rem;
+            }
+            .swiper-container {
+                width: 100%;
+                height: 4rem;
+            }
+            .banner .swiper-slide {
+                width: 2.48rem;
+                height: 3.69rem;
+            }
+            .banner .swiper-slide img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+            .movieMsgBox {
+                height: 1.34rem;
+                line-height: 1.34rem;
+                font-size: 0;
+                text-align: center;
+                position: relative;
+            }
+            .movieMsgBox .m_sub {
+                line-height: 0.5rem;
+            }
+            .movieMsgBox .til {
+                font-size: 0.26rem;
+                color: #333333;
+                height: 0.5rem;
+            }
+            .movieMsgBox .type,
+            .movieMsgBox .time {
+                font-size: 0.24rem;
+                color: #999999;
+                height: 0.4rem;
+            }
+            .movieMsgBox .shareIcon {
+                position: absolute;
+                width: 0.4rem;
+                height: 0.4rem;
+                right: 0.66rem;
+                bottom: 0.25rem;
+            }
+            .movieMsgBox .shareIcon img {
+                width: 100%;
+                height: 100%;
+            }
+            .selTimeBox {
+                width: 100%;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                border-top: 0.02rem solid #f2f2f2;
+                border-bottom: 0.02rem solid #f2f2f2;
+                font-size: 0;
+                white-space: nowrap;
+                overflow-x: auto;
+                margin-top: 0.2rem;
+            }
+            .selTimeBox > div {
+                display: inline-block;
+                vertical-align: top;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                font-size: 0.28rem;
+                margin: 0 0.3rem;
+            }
+            .selTimeBox .sel {
+                color: #46a3ff;
+            }
+
+            .ticketCnBox {
+                margin-top: 0.3rem;
+                padding-bottom: 1rem;
+            }
+            .ticketCnBox .t_list {
+                height: 1.08rem;
+                line-height: 1.08rem;
+                padding: 0 0.62rem;
+                border-bottom: 0.02rem solid #f2f2f2;
+            }
+            .ticketCnBox .t_list .t_time {
+                float: left;
+                font-size: 0.3rem;
+                color: #666666;
+            }
+            .ticketCnBox .r_msg {
+                float: right;
+                font-size: 0;
+            }
+            .ticketCnBox .r_msg .price {
+                font-size: 0.28rem;
+                color: #cc0000;
+                margin-right: 0.53rem;
+            }
+            .ticketCnBox .r_msg .buyBtn {
+                width: 1.36rem;
+                height: 0.5rem;
+                border-radius: 0.1rem;
+                text-align: center;
+                line-height: 0.5rem;
+                background-color: #46a3ff;
+                font-size: 0.3rem;
+                color: white;
+            }
+            .share {
+                /* width: 80vw;
+                height: 98.5vw; */
+                width: 6rem;
+                height: 7.38rem;
+                background-image: url("./img/menk.png");
+                background-size: 100%;
+                position: relative;
+            }
+            .colse{
+                text-align: center;
+                padding-bottom: 0.1rem;
+            }
+            .colse img{
+                width: 0.75rem;
+                height: 0.75rem;
+            }
+            .share_top_box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 0.28rem;
+                color: #333333;
+                padding-top: 0.8rem;
+            }
+            .scan{
+                width: 2.56rem;
+                height: 2.56rem;
+                margin-bottom: 0.2rem;
+            }
+            .share_top_box p{
+                line-height: 0.5rem;
+            }
+            .share_top_box button{
+                border-radius: 0.1rem;
+                border:1px solid rgba(70,163,255,1);
+                padding: 0.06rem 0.19rem;
+                background: #fff;
+                outline: none;
+                cursor: pointer;
+                margin-top: 0.2rem;
+            }
+            .share_bot{
+               position: absolute;
+               bottom: 0.3rem;
+               left: 50%;
+               transform: translateX(-50%);
+               padding-top:0;
+            }
+            .share_link{
+                width: 4rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .shareButtom {
+                width: 74vw;
+                height: 12vw;
+                background: rgba(70, 163, 255, 1);
+                border-radius: 6px;
+                margin: 0 auto;
+                margin-top: 15%;
+                color: #fff;
+                font-size: 0.34rem;
+                text-align: center;
+                line-height: 12vw;
+            }
+            [v-cloak] {
+                display: none;
+            }
+            .buy_content{
+                 /* width: 80vw;
+                 height: 98.5vw; */
+                 width: 6rem;
+                 height: 7.38rem;
+                 position: relative;
+                 background: #fff;
+                 border-radius: 0.2rem;
+                 box-sizing: border-box;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: center;
+                 font-size: 0.28rem;
+                 color: #333;
+            }
+            .buy_text{
+                line-height: 0.4rem;
+                width: 4rem;
+                text-indent: 2em;
+                padding-top: 0.9rem;
+            }
+            .mini_scan{
+                width: 2.65rem;
+                height: 2.65rem;
+                margin-top: 0.7rem;
+                margin-bottom: 0.7rem;
+            }
+            .buy_save{
+                width:2.2rem;
+                height:0.7rem;
+                background:rgba(70,163,255,1);
+                border-radius:0.1rem;
+                color: #fff;
+                font-size: 0.32rem;
+                font-weight: bold;
+                line-height: 0.7rem;
+                text-align: center;
+                outline: none;
+                cursor: pointer;
+                border: none;
+            }
+            #qrcode img{
+                width: 2.56rem;
+                height: 2.56rem;
+                margin-bottom: 0.2rem;
+            }
+            .exceed {
+                width: 1.36rem;
+                height: 0.5rem;
+                border-radius: 0.1rem;
+                text-align: center;
+                line-height: 0.5rem;
+                font-size: 0.3rem;
+                color: white;
+                background-color: #9e9e9e;
+;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="app">
+            <!-- 轮播图 -->
+            <div class="banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div
+                            class="swiper-slide"
+                            v-for="item in value"
+                            :id="item.id"
+                        >
+                            <img
+                                :src="item.coverBill"
+                                @click="toDetail(item.id)"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 电影信息 -->
+            <div class="movieMsgBox">
+                <div class="m_sub lineBox">
+                    <div class="til" v-cloak>{{ name }}</div>
+                    <div class="type" v-cloak>{{ language }}</div>
+                    <div class="time" v-cloak>
+                        {{ len }}分钟 — {{ classify }}
+                    </div>
+                </div>
+                <div class="shareIcon" @click="openShare(1)">
+                    <img src="img/share.png" />
+                </div>
+            </div>
+
+            <!-- 选择日期 -->
+            <div class="selTimeBox">
+                <!-- <div class="s_list sel">今天（周一）</div> -->
+                <div
+                    v-for="(item,i) in scheduling"
+                    :key="i"
+                    @click="currentItem(i)"
+                >
+                    <div
+                        :class="i == currentScheduling ? 'sel s_list' : 's_list'"
+                        v-cloak
+                    >
+                        {{ item.date }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- 票务情况  -->
+            <div class="ticketCnBox">
+                <div class="subCnBox">
+                    <div
+                        class="t_list div_float"
+                        v-for="(item, i) in schedulingDate"
+                        :key="i"
+                    >
+                        <div class="t_time" v-cloak>
+                            {{ item.start }} — {{ item.end }}
+                        </div>
+                        <div class="r_msg">
+                            <div class="price lineBox" v-cloak>
+                                ￥{{ item.ticketPrice }}
+                            </div>
+                            <div v-if="item.isExceed == true" class="exceed lineBox">购票</div>
+                            <div v-else class="buyBtn lineBox" @click="showBuyDialog(item.miniCode)">购票</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 站长分享 -->
+            <div v-show="shareMask" class="mask" v-cloak>
+                <div style="width: 100%;height:100%;" class="flex middle">
+                    <div class="shareBox">
+                        <div class="colse" @click='shareMask=false'>
+                            <img src='./img/close.png' />
+                        </div>  
+                        <div class="share">
+                            <div class="share_top_box">
+                                <div id="qrcode">
+                                    <!-- <img class='scan' src='' /> -->
+                                </div>
+                                <p>扫描二维码进入</p>
+                                <!-- 方式一 -->
+                                <!-- <button v-if="isMobile == false" @click='downLoadScan'>保存</button> -->
+                                <!-- <p v-else>温馨提示：请长按图片保存。</p> -->
+                                <!-- 方式二 -->
+                                <p v-if="isMobile == false">温馨提示：电脑端用户右键鼠标图片保存。</p>
+                                <p v-else>温馨提示：请长按图片保存。</p>
+                            </div>
+                            <div class="share_bot share_top_box">
+                                <div class='share_link' v-cloak>{{shareHttp}}</div>
+                                <p>复制链接进入</p>
+                                <button @click='copyUrl'>复制</button>
+                            </div>
+                        </div>
+                        <!-- <div class="shareButtom">分享给好友</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 用户购票 -->
+            <div v-show="buyTicketMask" class="mask" v-cloak>
+                <div style="width: 100%;height:100%;" class="flex middle">
+                    <div class="shareBox">
+                        <div class="colse" @click='buyTicketMask=false'>
+                            <img src='./img/close.png' />
+                        </div>
+                        <div class='buy_content'>
+                            <p class='buy_text'>
+                                请打开微信扫一扫,或保存至本
+                                地相册并打开微信扫描,进入微信小
+                                程席进行购票操作。
+                            </p>
+                            <img class='mini_scan' :src="buyMiniCode">
+                             <!-- 方式一 -->
+                            <!-- <button v-if="isMobile == false" class='buy_save' @click="saveScan">保存</button> -->
+                            <!-- <p v-else>温馨提示：请长按图片保存。</p> -->
+                             <!-- 方式二 -->
+                             <p v-if="isMobile == false">温馨提示：电脑端用户右键鼠标图片保存。</p>
+                               <p v-else>温馨提示：请长按图片保存。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="downloadLink"></a>
+        </div>
+    </body>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                sessionID:'', //站长id
+                currentId: '', //当前id
+                value: [], //对应的值
+                name: '', //电影名字
+                language: '', //语言
+                len: '', //时长
+                classify: '', //类型
+                scheduling: [], //排期
+                currentDay:'',//今天的日期
+                schedulingDate: [], //排期时间
+                currentScheduling: '0', //当前排期
+                shareMask: false, //分享蒙版
+                buyTicketMask: false, //购票蒙版
+                shareHttp: '', //分享出去的链接
+                initialSlide: '0', //轮播第一次显示的图片索引
+                activeIndex: '', //当前滑到的图片索引
+                shareIndex: '', //分享进来截取到的索引
+                buyMiniCode:'',
+                isMobile:true //判断是否是移动端
+            },
+            watch: {
+                currentId() {
+                    if (this.value) {
+                        this.value.forEach(item => {
+                            if (this.currentId == item.id) {
+                                this.name = item.name;
+                                this.language = item.filmAttr;
+                                this.len = item.len;
+                                this.classify = item.classify;
+                                this.scheduling = item.scheduling;
+                                this.currentDay = item.scheduling[0].date;
+                                this.schedulingDate =
+                                    item.scheduling[0].dateRows;
+                                    // console.log(new Date().getDate(), this.currentDay.split('-')[2] )
+                                    // 判断当天的排场
+                                   if(new Date().getDate() == this.currentDay.split('-')[2]) {
+                                    this.schedulingDate.forEach(ele => {
+                                        // console.log( ele.start.split(":")[0],'时');
+                                        // console.log( ele.start.split(":")[1],'分');
+                                        // console.log( new Date().getHours());
+                                        // console.log( new Date().getMinutes());
+                                        // 判断当天的排场时间是否过时
+                                        if(new Date().getHours() < ele.start.split(":")[0]){
+                                           ele.isExceed = false
+                                        }else{
+                                            if(new Date().getHours() == ele.start.split(":")[0]) {
+                                                if(new Date().getMinutes() <= ele.start.split(":")[1]) {
+                                                    ele.isExceed = false
+                                                }else{
+                                                    ele.isExceed = true
+                                                }
+                                            }else{
+                                                ele.isExceed = true
+                                            }
+                                        }
+                                    })
+                                   }
+                                //    console.log(this.schedulingDate);                                   
+                            }
+                        });
+                        this.currentScheduling = '0';
+                    }
+                }
+            },
+            methods: {
+                // 判断浏览器函数
+                isMobileF(){
+                    let that = this;
+                    if(window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+                        that.isMobile = true
+                        // return true;  // 移动端
+                    }else{
+                        that.isMobile = false
+                        // return false;  // PC端
+                    }
+                    // console.log(that.isMobile)
+                },
+                // 获取对应的JSON数据
+                getData() {
+                    let that = this;
+                    $.ajax({
+                        type: 'get',
+                        url: `./data/${that.sessionID}.json`,
+                        dataType: 'json',
+                        //请求参数
+                        success: function(res) {
+                            that.value = res;
+                            that.share(); //分享进来
+                            that.swiper(); //轮播
+                            // resolve(res);
+                        },
+                        error: function(err) {
+                            // reject(err);
+                            alert('出错了！');
+                        }
+                    });
+                },
+                // 轮播
+                swiper() {
+                    let that = this;
+					console.log(this);
+                    $(function() {
+                        var certifySwiper = new Swiper(
+                            '.banner .swiper-container',
+                            {
+                                on: {
+                                    transitionEnd: function() {
+                                        // alert(this.activeIndex); //切换结束时，告诉我现在是第几个slide
+                                        that.activeIndex = this.activeIndex;
+                                        that.currentId =
+                                            that.value[this.activeIndex].id;
+                                    }
+                                },
+								/* 点击居中 test number 2	 */
+								//slideToClickedSlide:true,//设置为true则点击slide会过渡到这个slide。
+                                slidesPerView: 'auto',
+								// 设置slider容器能够同时显示的slides数量(carousel模式)。
+								// 可以设置为数字（可为小数，小数不可loop），或者 'auto'则自动根据slides的宽度来设定数量。
+                                effect: 'coverflow',
+								// slide的切换效果，默认为"slide"（位移切换），可设置为'slide'（普通切换、默认）,"fade"（淡入）"cube"（方块）"coverflow"（3d流）"flip"（3d翻转）。
+                                initialSlide: that.initialSlide,//设定初始化时slide的索引。
+                                centeredSlides: true,  //设定为true时，active slide会居中，而不是默认状态下的居左。
+                                observer: true,
+                                observeParents: true,
+                                coverflowEffect: {  
+								//cover flow是类似于苹果将多首歌曲的封面以3D界面的形式显示出来的方式
+                                    rotate: 0,
+                                    stretch: 0,
+                                    depth: 200,
+                                    modifier: 2,
+                                    slideShadows: true
+                                }
+                            }
+                        );
+                    });
+                },
+			/* 点击居中
+				$('.swiper-container .swiper-slide').on("click",function(){
+				    //mySwiper.activeIndex   过渡到的 slide 位置 
+				    mySwiper.slideTo(mySwiper.activeIndex, 1000, false);//切换到指定slide，速度为1秒
+				    
+				}) */
+                // 点击分享按钮
+                openShare(i) {
+                    // 判断是否有索引
+                    if (i === 1) {
+                        if (window.location.href.split('=')[1]) {
+                            this.shareHttp =
+                                window.location.href.split('=')[0] +
+                                '=' +
+                                this.activeIndex+'=+'+this.sessionID;
+                        } else {
+                            this.shareHttp =
+                                window.location.href +
+                                '?index=' +
+                                this.activeIndex+'=+'+this.sessionID;
+                        }
+                        this.shareMask = true;
+                        // console.log(this.shareHttp)
+                        // console.log(window.location.href.split('=')[0],'特殊')
+                        this.porductCode(this.shareHttp)
+                    } else {
+                        this.shareMask = false;
+                    }
+                },
+                // 分享进来渲染对应电影
+                share() {
+                    this.shareIndex = window.location.href.split('=')[1];
+                    // console.log(this.shareIndex )
+                    if (this.shareIndex != undefined && this.shareIndex != '')
+                        this.initialSlide = this.shareIndex;
+                },
+                // 当前电影排期日期
+                currentItem(i) {
+                    this.currentScheduling = i;
+                    this.value.forEach(item => {
+                        if (this.currentId == item.id) {
+                            this.schedulingDate = item.scheduling[i].dateRows;
+                        }
+                    });
+                },
+                // 点击跳转详情
+                toDetail(id) {
+                    if(this.currentId == id) {
+                        window.location.href = `./detail.html?index-${this.activeIndex}-&id=${id}=+${this.sessionID}`;  
+                    }
+                },
+                // 生成二维码
+                porductCode(link_url){
+                    document.getElementById("qrcode").innerHTML = ''
+                    var qrcode = new QRCode(document.getElementById("qrcode"), {
+                        text: link_url,
+                        width: 128, //生成的二维码的宽度
+                        height: 128, //生成的二维码的高度
+                        colorDark : "#000000", // 生成的二维码的深色部分
+                        colorLight : "#ffffff", //生成二维码的浅色部分
+                        correctLevel : QRCode.CorrectLevel.H
+                    });
+                },
+                // 下载图片
+                downLoadScan(){
+                    // 获取base64的图片节点
+                    var img = document.getElementById('qrcode').getElementsByTagName('img')[0];
+                    // 构建画布
+                    var canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    canvas.getContext('2d').drawImage(img, 0, 0);
+                    // 构造url
+                    url = canvas.toDataURL('image/png');
+                    // console.log(img.src)
+                    // console.log(url)
+                    // 构造a标签并模拟点击
+                    var downloadLink = document.getElementById('downloadLink');
+                    downloadLink.setAttribute('href', url);
+                    downloadLink.setAttribute('download', '二维码');
+                    downloadLink.click();
+                },
+                // 复制链接
+                copyUrl(){
+                    XEClipboard.copy(this.shareHttp)
+                    vant.Toast.success('链接复制成功');
+                },
+                // 购票
+                showBuyDialog(codeUrl){
+                    this.buyMiniCode = codeUrl;
+                    console.log(this.buyMiniCode);
+                    this.buyTicketMask = true;
+                },
+                // 保存二维码
+                saveScan(){
+                    let imgUrl = this.buyMiniCode
+                    this.convertImgToBase64(imgUrl, function(base64Img){
+                        //转化后的base64
+                        // alert(base64Img);
+                        var downloadLink = document.getElementById('downloadLink');
+                        downloadLink.setAttribute('href', base64Img);
+                        downloadLink.setAttribute('download', '小程序码');
+                        downloadLink.click();
+                    });
+                },
+                convertImgToBase64(url, callback, outputFormat){
+                 var canvas = document.createElement('canvas'),
+                 　　ctx = canvas.getContext('2d'),
+                 　　img = new Image;
+                 　　img.crossOrigin = 'Anonymous';
+                 　　img.onload = function(){
+                    　　canvas.height = img.height;
+                    　　canvas.width = img.width;
+                    　　ctx.drawImage(img,0,0);
+                    　　var dataURL = canvas.toDataURL(outputFormat || 'image/png');
+                    　　callback.call(this, dataURL);
+                    　　canvas = null;
+                    };
+                 　　img.src = url;
+                }
+            },
+
+            created() {
+                this.sessionID = window.location.search.split('+')[1]
+                this.getData(); //获取相对应的数据
+                var vant = window.vant;
+                this.isMobileF();//判断是否是移动端
+            }
+        });
+    </script>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>电影详情</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+        />
+        <link rel="stylesheet" href="./utils/vantDist/vant.css">
+        <script src="./js/vue.min.js"></script>
+        <script src="./js//jQuery.min.js"></script>
+        <script src="js/flexible.js"></script>
+        <script src="./utils/vantDist/vant.js"></script>
+        <style>
+            /* 公用样式 start */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .ellipsis {
+                /*! autoprefixer: off*/
+                vertical-align: bottom;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                /* autoprefixer: on */
+            }
+            .ellipsis2 {
+                /*! autoprefixer: off*/
+                vertical-align: bottom;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                word-break: break-all;
+                /* autoprefixer: on */
+            }
+            .flex {
+                display: flex;
+            }
+            .center{
+                justify-content: center;
+                align-items: center;
+            }
+            .column {
+                flex-direction: column;
+            }
+            .flex1 {
+                flex: 1;
+            }
+            .prelative {
+                position: relative;
+            }
+            .absolute {
+                position: absolute;
+            }
+            .fontColor {
+                color: #666666;
+            }
+            .fontSize {
+                font-size: 0.34rem;
+                height: 0.65rem;
+            }
+            .inlineBlock {
+                display: inline-block;
+            }
+            .ac {
+                height: 0.8rem;
+                line-height: 0.4rem;
+                font-weight: bold;
+                font-size: 0.35rem;
+                border-bottom: 0.05rem solid #46a3ff;
+                color: #46a3ff;
+            }
+            .introduceLeft {
+                font-size: 0.28rem;
+            }
+            .item {
+                margin: 5vw 0;
+            }
+            .icon {
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                vertical-align: middle;
+                margin-right: 0.2rem;
+            }
+            .iconName{
+                font-size:0.22rem;
+                max-width: 1rem;
+                text-align: center;
+            }
+            .row {
+                flex: 1;
+                overflow-x: auto;
+                white-space:nowrap;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            /* 公用样式 end */
+            .return {
+                width: 2rem;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                font-size: 0.4rem;
+                /* width: 1.5rem;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                font-size: 0.3rem; */
+            }
+            .detailBox {
+                box-sizing: border-box;
+                padding: 0.3rem;
+            }
+            .imgDetail {
+                width: 3.23rem;
+            }
+            .imgDetail img {
+                width: 3.23rem;
+                height: 4.32rem;
+                border-radius: 10px;
+            }
+            .wantLook {
+                color: #ff6900;
+                bottom: 1.5vw;
+                left: 1vw;
+                font-size: 0.32rem;
+            }
+            .textDetail {
+                width: 59vw;
+                box-sizing: border-box;
+                padding: 0 3vw;
+            }
+            .name {
+                font-size: 0.34rem;
+                font-weight: 400;
+                height: 0.65rem;
+                width: 3.5rem;
+            }
+            .scoreNum {
+                color: #ff6900;
+                font-size: 0.34rem;
+                height: 0.65rem;
+            }
+            .price {
+                color: #cc0000;
+            }
+            .twoItem {
+                height: 0.8rem;
+                text-align: center;
+            }
+            .synopsis {
+                font-size: 0.35rem;
+                height: 0.8rem;
+            }
+            .headPortrait {
+                display: inline-block;
+            }
+            .aItem{
+                margin-right: 0.2rem;
+                width: 1.2rem;
+            }
+            .herald {
+                font-size: 0.35rem;
+                height: 0.8rem;
+            }
+            .centent {
+                flex: 1;
+                font-size: 0.26rem;
+                color: #333333;
+            }
+            .video {
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+            [v-cloak] {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app" class="flex column">
+            <!-- 占位 -->
+            <div style="width: 100%;height:0.8rem;">
+                <div class="return" @click="returnPrevious">〈&nbsp;返回</div>
+            </div>
+
+            <!-- 电影详情 -->
+            <div class="flex detailBox">
+                <div class="imgDetail">
+                    <img :src="value.coverBill" alt="" />
+                    <div class="prelative">
+                        <span class="absolute wantLook"
+                        v-cloak>{{ value.count }}想看</span
+                        >
+                    </div>
+                </div>
+
+                <div class="textDetail">
+                    <h1 class="name ellipsis" v-cloak>{{ value.name }}</h1>
+                    <div class="score">
+                        <div class="inlineBlock">
+                            <van-rate class="fontSize" color="#FF6900" v-model="star" size="16" readonly allow-half />
+                        </div>
+                        <span class="scoreNum" v-cloak>{{ value.score }}</span>
+                    </div>
+                    <div class="type fontColor fontSize">
+                        <span v-cloak>{{ value.filmAttr }}</span>
+                        |
+                        <span v-cloak>{{ value.len }}分钟</span>
+                    </div>
+                    <div class="fontColor fontSize ellipsis" v-cloak>{{ value.country }}</div>
+                    <div class="fontColor fontSize">上映时间:</div>
+                    <div class="fontColor fontSize" v-cloak>{{ value.date }}</div>
+                    <div class="fontColor fontSize price" v-cloak>
+                        ￥{{ value.price }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- 简介&预告 -->
+            <div class="flex column" style="box-sizing: border-box; margin: 0 0.3rem;">
+                <!-- 两选项 -->
+                <div class="twoItem flex">
+                    <div
+                        :class="currentItem === 0 ? 'ac flex1 inlineBlock' : 'flex1 inlineBlock synopsis'"
+                        @click="clickItem(1)"
+                    >
+                        电影简介
+                    </div>
+                    <div
+                        :class="currentItem === 1 ? 'ac flex1 inlineBlock' : 'flex1 inlineBlock herald'"
+                        @click="clickItem(2)"
+                    >
+                        预告片
+                    </div>
+                </div>
+
+                <!-- 电影介绍 -->
+                <div v-show="currentItem === 0">
+                    <div class="flex item">
+                        <span class="introduceLeft">简介：</span>
+                        <span class="centent" v-cloak>{{ synopsis }}</span>
+                    </div>
+                    <div class="flex item">
+                        <span class="introduceLeft">导演：</span>
+                        <div class="row">
+                            <div class="headPortrait" v-for="(item,i) in director" :key="i">
+                                <div class="flex column aItem ">
+                                    <img class="icon" :src="item.portrait" alt="" />
+                                    <span class="iconName ellipsis">{{item.name}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex item">
+                        <span class="introduceLeft">演员：</span>
+                        <div class="row">
+                                <div class="headPortrait" v-for="(item,i) in performer" :key="i">
+                                    <div class="flex column aItem ">
+                                        <img class="icon" :src="item.portrait" alt="" />
+                                        <span class="iconName ellipsis">{{item.name}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!-- 预告片 -->
+                <div v-show="currentItem === 1">
+                    <video
+                        class="video"
+                        :src="video"
+                        controls="controls"
+                    ></video>
+                </div>
+            </div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data() {
+                    return {
+                        id: '', //id
+                        currentItem: 1, //选中的Item
+                        value: '', //数据
+                        star: 9, //星星
+                        synopsis: '', //简介
+                        director: [], //导演
+                        performer: [], //演员
+                        index:'',
+                        sessionID:'',//站长id
+                        video:'' //视频
+                    };
+                },
+                methods: {
+                    // 进入获取数据
+                    getData() {
+                        let that = this;
+                        that.id = location.search.split('=')[1];
+                        $.ajax({
+                            type: 'get',
+                            url: './data/' + that.id + '.json',
+                            dataType: 'json',
+                            //请求参数
+                            success: function(res) {
+                                res.date = res.date.split(' ')[0]
+                                that.value = res;
+                                that.star = res.score/2
+                                that.synopsis =
+                                    res.items.introduceLeft.synopsis;
+                                that.director =
+                                    res.items.introduceLeft.director;
+                                that.performer =
+                                    res.items.introduceLeft.performer;
+                                    that.video= res.items.vedio
+                                // resolve(res);
+                            },
+                            error: function(err) {
+                                // reject(err);
+                                alert('出错了！');
+                            }
+                        });
+                    },
+                    // 点击Item,更变状态
+                    clickItem(i) {
+                        if (i === 1) {
+                            this.currentItem = 0;
+                        } else {
+                            this.currentItem = 1;
+                        }
+                    },
+                    // 返回上一页
+                    returnPrevious() {
+                        window.location.href = `./index.html?index=${window.location.href.split('-')[1]}=+${this.sessionID}`;  
+                        // history.back(-1);
+                        // history.go(-1)
+                    }
+                },
+                created(e) {
+                    this.getData();
+                    this.sessionID = window.location.search.split('+')[1]
+                }
+            });
+        </script>
+    </body>
+</html>
